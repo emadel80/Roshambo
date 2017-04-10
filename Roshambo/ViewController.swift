@@ -14,11 +14,14 @@ class ViewController: UIViewController {
     super.viewDidLoad()
   
   }
-
+  
   @IBAction func paperChoice(_ sender: Any) {
+    let resultController = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as!ResultViewController
     
+    resultController.playerChoice = "paper"
+    
+    present(resultController, animated: true, completion: nil)
   }
-
   
 }
 

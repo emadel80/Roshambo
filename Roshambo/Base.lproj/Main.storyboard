@@ -131,7 +131,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="n" destination="Eq9-v2-taY" id="7Us-9t-B5G"/>
                         <outlet property="resultImage" destination="Eq9-v2-taY" id="Fjf-yA-4si"/>
                         <outlet property="resultLabel" destination="1FD-SV-y5k" id="uvn-ER-Ioo"/>
                     </connections>

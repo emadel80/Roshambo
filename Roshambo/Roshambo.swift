@@ -27,36 +27,32 @@ class Roshambo {
   )
   
   static func results(playerChoice: String) -> String {
-    let artificialPlayerChoice =
-      choices[1 + arc4random().hashValue % 3]
+    let artificialPlayerChoice = choices[Int(arc4random() % 3)]
     
     if playerChoice == artificialPlayerChoice {
       status = "Its a tie.  No one wins!"
       return outcome.tie
     }
     else if winRules[playerChoice] == artificialPlayerChoice {
-      let choice  = winningChoice(playerChoice: playerChoice)!
-          status += "  You win!"
-      return choice
+      status = "  You win!"
+      return winningChoice(playerChoice: playerChoice)!
     }
     else {
-      let choice =
-        winningChoice(playerChoice: artificialPlayerChoice)!
-          status = "  You loose!"
-      return choice
+      status = "  You loose!"
+      return winningChoice(playerChoice: artificialPlayerChoice)!
     }
   }
   
   private static func winningChoice(playerChoice: String) -> String? {
     switch playerChoice {
       case "paper":
-        status = "Paper covers rock."
+        status = "Paper covers rock.  \(status)"
         return outcome.paperWins
       case "rock":
-        status = "Rock crushes scissors."
+        status = "Rock crushes scissors.  \(status)"
         return outcome.rockWins
       case "scissors":
-        status = "Scissors cut paper."
+        status = "Scissors cut paper.  \(status)"
         return outcome.scissorsWins
     default:
         return nil
