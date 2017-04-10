@@ -33,7 +33,7 @@
                                         </constraints>
                                         <state key="normal" image="paper"/>
                                         <connections>
-                                            <action selector="paperChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1Q-hx-MFP"/>
+                                            <action selector="paperChoice" destination="BYZ-38-t0r" eventType="touchUpInside" id="PTq-ne-IqT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxr-Z2-Sll">
@@ -43,6 +43,9 @@
                                             <constraint firstAttribute="height" constant="65" id="JAQ-aO-Cd4"/>
                                         </constraints>
                                         <state key="normal" image="rock"/>
+                                        <connections>
+                                            <action selector="rockChoice" destination="BYZ-38-t0r" eventType="touchUpInside" id="BR8-dU-nS0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lie-9X-wXd">
                                         <rect key="frame" x="208" y="280" width="76" height="65"/>
@@ -92,6 +95,9 @@
                             <constraint firstItem="JeK-Vx-k35" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oaT-AP-jZv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="1uD-MZ-l4P" kind="presentation" identifier="RockSelectionResult" id="84G-GJ-ff6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,15 +120,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="ImageResult"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FD-SV-y5k">
-                                <rect key="frame" x="67" y="323" width="240" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1FD-SV-y5k">
+                                <rect key="frame" x="16" y="323" width="343" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbV-Gu-ckf">
-                                <rect key="frame" x="141" y="457" width="93" height="38"/>
+                                <rect key="frame" x="141" y="474" width="93" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Play again"/>

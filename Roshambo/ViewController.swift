@@ -15,7 +15,15 @@ class ViewController: UIViewController {
   
   }
   
-  @IBAction func paperChoice(_ sender: Any) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "RockSelectionResult" {
+      let controller = segue.destination as! ResultViewController
+      
+      controller.playerChoice = "rock"
+    }
+  }
+  
+  @IBAction func paperChoice() {
     let resultController = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as!ResultViewController
     
     resultController.playerChoice = "paper"
@@ -23,5 +31,8 @@ class ViewController: UIViewController {
     present(resultController, animated: true, completion: nil)
   }
   
+  @IBAction func rockChoice() {
+    performSegue(withIdentifier: "RockSelectionResult", sender: self)
+  }
 }
 
