@@ -9,9 +9,10 @@
 import UIKit
 
 class Roshambo {
-  
-          static var status   = ""
-  private static let choices  = ["paper", "rock", "scissors"]
+          static var playerScore   = 0
+          static var computerScore = 0
+          static var status        = ""
+  private static let choices       = ["paper", "rock", "scissors"]
   
   private static let winRules = [
     "paper"    : "rock",
@@ -34,11 +35,13 @@ class Roshambo {
       return outcome.tie
     }
     else if winRules[playerChoice] == artificialPlayerChoice {
-      status = "  You win!"
+      status       = "  You win!"
+      playerScore += 1
       return winningChoice(playerChoice: playerChoice)!
     }
     else {
-      status = "  You loose!"
+      status         = "  You loose!"
+      computerScore += 1
       return winningChoice(playerChoice: artificialPlayerChoice)!
     }
   }

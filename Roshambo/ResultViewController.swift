@@ -10,7 +10,7 @@ import UIKit
 
 class ResultViewController: UIViewController {
   
-  var playerChoice : String?
+  var playerChoice  : String?
   
   @IBOutlet weak var resultImage: UIImageView!
   @IBOutlet weak var resultLabel: UILabel!
@@ -22,7 +22,7 @@ class ResultViewController: UIViewController {
       named: Roshambo.results(playerChoice: playerChoice!)
     )
     
-    resultLabel.text = Roshambo.status
+    resultLabel.text  = Roshambo.status
   }
 
   @IBAction func playAgain() {

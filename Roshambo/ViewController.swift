@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
+  @IBOutlet weak var playerScoreLabel:   UILabel!
+  @IBOutlet weak var computerScoreLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
   
+  override func viewWillAppear(_ animated: Bool) {
+    playerScoreLabel.text   = "Player: \(Roshambo.playerScore)"
+    computerScoreLabel.text =
+      "Computer: \(Roshambo.computerScore)"
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
