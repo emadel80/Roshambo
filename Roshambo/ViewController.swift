@@ -21,6 +21,11 @@ class ViewController: UIViewController {
       
       controller.playerChoice = "rock"
     }
+    else {
+      let controller = segue.destination as! ResultViewController
+      
+      controller.playerChoice = "scissors"
+    }
   }
   
   @IBAction func paperChoice() {

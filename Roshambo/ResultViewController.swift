@@ -25,6 +25,9 @@ class ResultViewController: UIViewController {
     resultLabel.text = Roshambo.status
   }
 
+  @IBAction func playAgain() {
+    dismiss(animated: true, completion: nil)
+  }
   
     /*
     // MARK: - Navigation

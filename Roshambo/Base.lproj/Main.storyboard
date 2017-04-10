@@ -54,6 +54,9 @@
                                             <constraint firstAttribute="height" constant="65" id="T17-wY-FQS"/>
                                         </constraints>
                                         <state key="normal" image="scissors"/>
+                                        <connections>
+                                            <segue destination="1uD-MZ-l4P" kind="presentation" identifier="" id="KoT-d2-cVt"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ty-RL-6Ll">
                                         <rect key="frame" x="58" y="456" width="226" height="33"/>
@@ -132,6 +135,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Play again"/>
+                                <connections>
+                                    <action selector="playAgain" destination="1uD-MZ-l4P" eventType="touchUpInside" id="hzk-2Z-wGY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,4 +157,7 @@
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KoT-d2-cVt"/>
+    </inferredMetricsTieBreakers>
 </document>
